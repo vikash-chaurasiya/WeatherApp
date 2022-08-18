@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1000px) {
+    #main-heading {
+        color: rgb(43, 51, 51);
+    }
+}
+
+#currentTemp {
+    font-size: 5rem;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+#card2 {
+    background-image: url('https://png.pngtree.com/background/20210712/original/pngtree-sunny-weather-realistic-background-picture-image_1172734.jpg');
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#card1 {
+    color: #4b515d;
+    border-radius: 15px;
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/07/16/12/sky-1441936_960_720.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(50, 50, 46);
+}
+
+a:hover {
+    color: rgb(88, 88, 81);
+}
+
+span {
+    color: rgb(28, 25, 25);
+    font-weight: 500;
+}

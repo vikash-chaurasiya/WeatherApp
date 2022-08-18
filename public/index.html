@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <!-- fontawesom -->
+    <script src="https://kit.fontawesome.com/86253ff43d.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Weather App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <section class="vh-100" style="background-image: url('https://images7.alphacoders.com/993/thumb-1920-993764.jpg'); background-attachment:fixed;">
+      <div class="container py-5 h-100">
+        <h1 class="text-center mt-5" id="main-heading">Live Weather Forecast <img
+            src="https://img.icons8.com/clouds/100/000000/partly-cloudy-night.png" /></h1>
+
+        <!-- ************************************ Geo Weather **************************** -->
+        <div class="row">
+          <div class="col">
+            <div class="card mt-3 shadow-lg border-0" id="card1">
+              <img src="" alt="">
+              <div class="card-body p-4">
+                <div class="d-flex">
+                  <h5 class="flex-grow-1 text-dark " id="cityAuto">City,country</h5>
+                  <h5 id="geoTime" class="text-dark">15:07</h5>
+                </div>
+                <div class="d-flex flex-column text-center mt-5 mb-4">
+                  <h6 class="display-4 mb-0 font-weight-bold" style="color: #1c2331" id="tempGeo">
+                    24°C
+                  </h6>
+                  <span class="medium" style="color: #515358" id="geoClouds">Stormy</span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1" style="font-size: 1rem">
+                    <div>
+                      <img
+                        src="https://img.icons8.com/external-line-gradient-kendis-lasman/32/000000/external-temperature-weather-and-disaster-line-gradient-line-gradient-kendis-lasman.png"
+                        style="height:27px ;" />
+                      <span id="geoFeels">36</span>
+                    </div>
+                    <div>
+                      <i class="fas fa-wind fa-fw" style="color: #868b94"></i>
+                      <span class="ms-1" id="geoWind"> 40 km/h </span>
+                    </div>
+                    <div>
+                      <i class="fas fa-tint fa-fw" style="color: #868b94"></i>
+                      <span class="ms-1" id="geoHumidity"> 84% </span>
+                    </div>
+                    <div>
+                      <img src="https://img.icons8.com/metro/26/737373/sorting-arrows.png" style="height:20px;" />
+                      <span class="ms-1" id="mxmn"> 0 </span>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="https://img.icons8.com/fluency/96/000000/partly-cloudy-day.png" style="height:100px"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- *************************************** Search City Weather ***************************************************** -->
+
+          <div class="col">
+            <div class="input-group rounded my-3  " style="border-radius: 35px;">
+              <input type="search" class="form-control rounded" placeholder="Enter City name" aria-label="Search"
+                aria-describedby="search-addon" id="input-box" />
+            </div>
+
+            <div class="card shadow-lg  border-0" id="card2">
+              <div class="card-body p-4">
+                <h4 class="mb-1 sfw-normal" id="customCity">New York, US</h4>
+                <h5 class="mb-1 sfw-normal lh-lg" id="currentDate">
+                  10 June (wednesday), 2022
+                </h5>
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1" style="font-size: 1rem">
+                    <p class="mb-2">
+                      Humidity: <strong id="humidity">80</strong>
+                    </p>
+                    <p>Feels like: <strong id="feelsLike">4.37°C</strong></p>
+                    <p>
+                      Max: <strong id="minTemp">6.11°C</strong>, Min:
+                      <strong id="maxTemp">3.89°C</strong>
+                    </p>
+                    <p class="mb-0 me-4"><span id="cloud">Scattered Clouds</span>
+                      <i class="fas fa-cloud fa-3x" style="color: rgb(142, 130, 130); margin-left: 15px;"></i></p>
+                  </div>
+                  <div>
+                    <h1 id="currentTemp">5.42°C</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-4" style="background-color: rgb(240, 241, 238)">
+       <span>© 2022 Copyright :</span>
+        <a  href="https://vikashportfolio.w3spaces.com/index.html">vikashchaurasia.com</a>
+      </div>
+    </section>
+  </body>
+</html>
