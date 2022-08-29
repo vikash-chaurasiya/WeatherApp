@@ -4,6 +4,7 @@ where you can see live weather of any city .
 
 Live site link -: https://gleaming-kheer-80b9f6.netlify.app/
 
+<img src="Screenshot.png">
 features - 
 
 	        1. Automatically locate your location and show weather.
